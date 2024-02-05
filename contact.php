@@ -46,7 +46,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contactez-nous chez Pierre Armes. Utilisez ce formulaire pour nous envoyer un message ou poser une question.">
+    <meta name="description"
+        content="Contactez-moi chez Pierre Armes. Utilisez ce formulaire pour m'envoyer un message ou poser une question.">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Contact - Pierre Armes</title>
@@ -55,39 +56,41 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <header class="bg-dark text-white text-center py-4">
         <img src="assets/img/pierrearmes-logo.png" alt="Pierre Armes" class="img-fluid" id="logo">
-        <p class="fs-5">Votre spécialiste en Armurerie depuis 1985</p>
+        <p class="fs-5">Je suis votre spécialiste en Armurerie depuis 1985</p>
     </header>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
+        <div class="container justify-content-center">
             <a class="navbar-brand" href="index.html">Accueil</a>
             <a class="navbar-brand" href="produits.html">Produits</a>
             <a class="navbar-brand" href="contact.html">Contact</a>
         </div>
     </nav>
-
-    <section class="container my-4  justify-content-center align-items-center">
-        <h2 class="display-4 text-center mb-4">Contactez-nous</h2>
-        <form action="" method="post">
+    <section class="container my-4 ">
+        <h2 class="display-4 text-center mb-4">Contactez-moi</h2>
+        <form action="contact.php" method="post">
             <div class="mb-3">
                 <label for="nom" class="form-label">Nom</label>
-                <input name="nom" type="text" class="form-control" id="nom" placeholder="Votre nom">
+                <input name="nom" type="text" class="form-control" id="nom" placeholder="Votre nom" required>
             </div>
             <div class="mb-3">
                 <label for="prenom" class="form-label">Prénom</label>
-                <input name="prenom" type="text" class="form-control" id="prenom" placeholder="Votre prénom">
+                <input name="prenom" type="text" class="form-control" id="prenom" placeholder="Votre prénom" required>
             </div>
             <div class="mb-3">
                 <label for="email" class="form-label">Adresse Email</label>
-                <input name="email" type="email" class="form-control" id="email" placeholder="Votre adresse email">
+                <input name="email" type="email" class="form-control" id="email" placeholder="Votre adresse email"
+                    required>
             </div>
             <div class="mb-3">
                 <label for="phone" class="form-label">Téléphone</label>
-                <input name="phone" type="tel" class="form-control" id="phone" placeholder="Votre numéro de téléphone">
+                <input name="phone" type="tel" class="form-control" id="phone" placeholder="Votre numéro de téléphone"
+                    required>
             </div>
             <div class="mb-3">
                 <label for="message" class="form-label">Message</label>
-                <textarea class="form-control" id="message" rows="4" placeholder="Votre message"></textarea>
+                <textarea name="message" class="form-control" id="message" rows="4" placeholder="Votre message"
+                    required></textarea>
             </div>
             <div class="d-grid">
                 <button name="send" type="submit" class="btn btn-primary">Envoyer</button>
@@ -100,7 +103,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <p class="mb-0">&copy; 2024 Pierre Armes - Tous droits réservés</p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-eJqCymofRgDMxm8JmT5dIOWPDwy5JNzROc6CPa3KJCzPBy1dG8hliZgM5u5o18m" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-eJqCymofRgDMxm8JmT5dIOWPDwy5JNzROc6CPa3KJCzPBy1dG8hliZgM5u5o18m"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
