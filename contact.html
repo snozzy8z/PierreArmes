@@ -27,28 +27,39 @@
     <section class="container my-4 ">
         <h2 class="display-4 text-center mb-4">Contactez-moi</h2>
         <form id="myForm">
-            <div class="mb-3">
-                <label for="nom" class="form-label">Nom</label>
-                <input name="nom" type="text" class="form-control" id="nom" placeholder="Votre nom">
+            <div class="mb-3 row">
+                <label for="nom" class="form-label col-md-2">Nom</label>
+                <div class="col-md-10">
+                    <input name="nom" type="text" class="form-control" id="nom" placeholder="Votre nom">
+                </div>
             </div>
-            <div class="mb-3">
-                <label for="prenom" class="form-label">Prénom</label>
-                <input name="prenom" type="text" class="form-control" id="prenom" placeholder="Votre prénom">
+            <div class="mb-3 row">
+                <label for="prenom" class="form-label col-md-2">Prénom</label>
+                <div class="col-md-10">
+                    <input name="prenom" type="text" class="form-control" id="prenom" placeholder="Votre prénom">
+                </div>
             </div>
-            <div class="mb-3">
-                <label for="email" class="form-label">Adresse Email</label>
-                <input name="email" type="email" class="form-control" id="email" placeholder="Votre adresse email">
+            <div class="mb-3 row">
+                <label for="email" class="form-label col-md-2">Adresse Email</label>
+                <div class="col-md-10">
+                    <input name="email" type="email" class="form-control" id="email" placeholder="Votre adresse email">
+                </div>
             </div>
-            <div class="mb-3">
-                <label for="phone" class="form-label">Téléphone</label>
-                <input name="phone" type="tel" class="form-control" id="phone" placeholder="Votre numéro de téléphone">
+            <div class="mb-3 row">
+                <label for="phone" class="form-label col-md-2">Téléphone</label>
+                <div class="col-md-10">
+                    <input name="phone" type="tel" class="form-control" id="phone"
+                        placeholder="Votre numéro de téléphone">
+                </div>
             </div>
-            <div class="mb-3">
-                <label for="message" class="form-label">Message</label>
-                <textarea name="message" class="form-control" id="message" rows="4"
-                    placeholder="Votre message"></textarea>
+            <div class="mb-3 row">
+                <label for="message" class="form-label col-md-2">Message</label>
+                <div class="col-md-10">
+                    <textarea name="message" class="form-control" id="message" rows="4"
+                        placeholder="Votre message"></textarea>
+                </div>
             </div>
-            <div class="d-grid">
+            <div class="d-grid col-md-6 mx-auto">
                 <button name="send" type="submit" class="btn btn-primary">Envoyer</button>
             </div>
         </form>
