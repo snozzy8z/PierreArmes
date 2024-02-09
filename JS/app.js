@@ -62,5 +62,6 @@ app.post('/sendEmail', async (req, res) => {
 
 // Start server
 app.listen(port, () => {
-    console.log(`Server is listening at http://localhost:${port}`);
+    console.log(`Server is listening at http://
+    pierrearmes-production.up.railway.app`);
 });
