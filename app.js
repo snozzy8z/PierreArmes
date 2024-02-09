@@ -1,14 +1,14 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const Joi = require('joi');
-const ReSend = require('resend');
+const nodemailer = require('nodemailer');
 const cors = require('cors');
 
 const app = express();
 const port = 3000;
 
 // Middleware
-app.use(cors()); // Active CORS pour toutes les routes
+app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
@@ -21,17 +21,6 @@ const schema = Joi.object({
     message: Joi.string().required()
 });
 
-// Configure ReSend
-const resend = new ReSend({
-    host: 'your-smtp-host', // e.g., 'smtp.gmail.com'
-    port: 587, // SMTP port (e.g., 587 for TLS)
-    secure: false, // true for 465, false for other ports
-    auth: {
-        user: 'atoxmillenium@gmail.com', // your email
-        pass: '16Septembre2020!' // your password
-    }
-});
-
 // Route handler for form submission
 app.post('/sendEmail', async (req, res) => {
     const { error, value } = schema.validate(req.body);
@@ -40,9 +29,17 @@ app.post('/sendEmail', async (req, res) => {
         return res.status(400).send(error.details[0].message);
     }
 
-    // Send email logic using ReSend
+    // Send email logic using Nodemailer
     try {
-        await resend.sendMail({
+        const transporter = nodemailer.createTransport({
+            service: 'gmail',
+            auth: {
+                user: process.env.GMAIL_USER, // your email from environment variable
+                pass: process.env.GMAIL_PASS // your password from environment variable
+            }
+        });
+
+        await transporter.sendMail({
             from: 'your-email@gmail.com',
             to: 'atoxmillenium@gmail.com', // Change this to your desired recipient email address
             subject: 'Nouveau message depuis le formulaire de contact',
