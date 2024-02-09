@@ -34,8 +34,8 @@ app.post('/sendEmail', async (req, res) => {
         const transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
-                user: process.env.GMAIL_USER, // your email from environment variable
-                pass: process.env.GMAIL_PASS // your password from environment variable
+                user: 'atoxmillenium@gmail.com', // your email
+                pass: 'yeuk xnjh keqj held!' // your password
             }
         });
 
@@ -62,6 +62,5 @@ app.post('/sendEmail', async (req, res) => {
 
 // Start server
 app.listen(port, () => {
-    console.log(`Server is listening at http://
-    pierrearmes-production.up.railway.app`);
+    console.log(`Server is listening at http://localhost:${port}`);
 });
