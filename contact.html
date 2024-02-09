@@ -24,9 +24,9 @@
             <a class="navbar-brand" href="contact.html">Contact</a>
         </div>
     </nav>
-    <section class="container my-4 ">
+    <section class="container my-4">
         <h2 class="display-4 text-center mb-4">Contactez-moi</h2>
-        <form id="myForm">
+        <form id="myForm" action="/sendEmail" method="post">
             <div class="mb-3 row">
                 <label for="nom" class="form-label col-md-2">Nom</label>
                 <div class="col-md-10">
@@ -63,8 +63,8 @@
                 <button name="send" type="submit" class="btn btn-primary">Envoyer</button>
             </div>
         </form>
-
     </section>
+
 
     <footer class="bg-dark text-white text-center py-3">
         <p class="mb-0">&copy; 2024 Pierre Armes - Tous droits réservés</p>
