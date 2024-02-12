@@ -16,15 +16,24 @@
 
 <body>
 
-    <header class="bg-secondary text-white text-center py-4">
-        <img src="assets/img/pierrearmes-logo.png" alt="Pierre Armes" class="img-fluid" id="logo">
-        <p id="titleHead" class="fs-5">Spécialiste en Armurerie depuis 1985</p>
+    <header class="bg-secondary text-white py-4">
+        <div class="container-fluid"> <!-- Utilisation de container-fluid pour occuper toute la largeur -->
+            <div class="row align-items-center">
+                <div class="col-md-4 text-start"> <!-- Ajout de la classe text-start pour aligner le contenu à gauche -->
+                    <img src="assets/img/pierrearmes-logo.png" alt="Pierre Armes" class="img-fluid" id="logo">
+                </div>
+                <div class="col-md-4 text-center text-md-start">
+                    <h1 class="display-4 mb-0 text-center">Bienvenue chez Pierre Armes</h1>
+                    <p class="fs-5 mb-0 text-center">Spécialiste en Armurerie depuis 1985</p>
+                </div>
+            </div>
+        </div>
     </header>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
         <div class="container justify-content-center align-items-center ">
-            <a class="navbar-brand" href="index.html" style="margin-right: 50px;">Accueil</a>
-            <a class="navbar-brand" href="produits.html" style="margin-right: 50px;">Produits</a>
+            <a class="navbar-brand" href="index.html" style="margin-right: 150px;">Accueil</a>
+            <a class="navbar-brand" href="produits.html" style="margin-right: 150px;">Produits</a>
             <a class="navbar-brand" href="contact.html">Contact</a>
         </div>
     </nav>
@@ -33,35 +42,34 @@
         <div class="row">
             <div class="col-md-12">
                 <h2 class="display-4">Ma sélection pour vous</h2>
-                <div class="border-bottom my-5">
-                </div>
+                <div class="border-bottom my-5"></div>
             </div>
         </div>
-
+    
         <div class="row mt-4">
-            <div class="col-md-4">
+            <div class="col-md-4 mb-4">
                 <h2 class="display-5 my-3">Fusils de Qualité Supérieure</h2>
-                <p class="lead">
+                <p class="lead justify-content-center">
                     Découvrez ma sélection exclusive de fusils de chasse de la plus haute qualité chez Pierre Armes.
                     Mes fusils sont soigneusement choisis pour allier performance et précision. Que vous soyez un
                     passionné de chasse ou un professionnel de la sécurité, mes fusils vous offrent la confiance et la
                     fiabilité dont vous avez besoin.
                 </p>
             </div>
-
-            <div class="col-md-4">
+    
+            <div class="col-md-4 mb-4">
                 <h2 class="display-5 my-3">Cartouches de Performance</h2>
-                <p class="lead">
+                <p class="lead justify-content-center">
                     Optimisez votre expérience de tir avec mes cartouches de haute performance. Chez Pierre Armes, je
                     propose une gamme complète de cartouches adaptées à différents calibres et applications. Mes
                     cartouches sont conçues pour offrir une puissance optimale et une précision inégalée, répondant
                     ainsi aux normes les plus strictes en matière de sécurité et de qualité.
                 </p>
             </div>
-
-            <div class="col-md-4">
+    
+            <div class="col-md-4 mb-4">
                 <h2 class="display-5 my-3">Accessoires Essentiels</h2>
-                <p class="lead">
+                <p class="lead justify-content-center">
                     Explorez ma collection d'accessoires essentiels pour compléter votre équipement. De la sécurité
                     personnelle aux outils spécialisés, Pierre Armes propose une gamme diversifiée d'accessoires
                     soigneusement sélectionnés. Trouvez tout ce dont vous avez besoin, des étuis de protection aux
@@ -69,19 +77,20 @@
                 </p>
             </div>
         </div>
-
-        <div class="row mt-4">
+    
+        <div class="row mt-4 mb-4">
             <div class="col-md-12">
-                <p class="lead">
+                <p class="lead justify-content-center">
                     Chez Pierre Armes, je m'engage à vous fournir des produits de premier ordre, sélectionnés
                     avec soin pour répondre à vos besoins spécifiques. Explorez mon site en ligne pour découvrir
                     la qualité, l'innovation et la fiabilité dans chaque produit que je propose.
                 </p>
             </div>
         </div>
-        <div class="border-bottom mb-4">
-        </div>
+        <div class="border-bottom my-5"></div>
     </section>
+    
+
 
     <!--CARDS-->
     <section class="container my-4 mb-5">
