@@ -47,12 +47,51 @@ address,
     font-family: 'Great Vibes', cursive;
 }
 
-a {
+
+/*button*/
+.button {
+    display: inline-block;
+    padding: .75rem 1.25rem;
+    border-radius: 10rem;
     color: #fff;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: .15rem;
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
 }
 
-a:hover {
-    color: #fff;
-    opacity: 0.5;
+.button:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: gray-600; /* Remplacer $color par la valeur de la couleur */
+    border-radius: 10rem;
+    z-index: -2;
 }
 
+.button:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: darkgrey; /* Remplacer darken($color, 15%) par une couleur plus sombre */
+    transition: all .3s;
+    border-radius: 10rem;
+    z-index: -1;
+}
+
+.button:hover {
+    color: #fff;
+
+    &:before {
+        width: 100%;
+    }
+}
