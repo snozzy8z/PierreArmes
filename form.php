@@ -48,9 +48,12 @@ try {
     // Envoi du message
     $mail->send();
 
-    // Si l'e-mail est envoyé avec succès
-    echo json_encode(array('message' => 'Email envoyé avec succès!', 'code' => 1));
+    // Redirection vers la page d'accueil
+    header('Location: index.html');
+    exit(); // Assure que le script s'arrête ici pour éviter toute exécution supplémentaire
+
 } catch (Exception $e) {
     // En cas d'erreur
     echo json_encode(array('message' => 'Une erreur s\'est produite lors de l\'envoi de l\'email : ' . $mail->ErrorInfo, 'code' => 0));
 }
+
